@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+   	<nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Logo</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="#">Sass</a></li>
+        <li><a href="#">Components</a></li>
+        <li><a href="#">JavaScript</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="jumbotron">
+      <h2>Welcome to wedding photography</h2>
+
+    </div>
+
+    <div id="basicExample" class="justified-gallery">
+
+        <a href="{% static 'media_root/images/image-4.jpg'%}">
+            <img alt="caption for image 2" src="{% static 'media_root/images/image-4.jpg'%}"/>
+        </a>
+
+        <a href="{% static 'media_root/images/image-5.jpg'%}">
+            <img alt="caption for image 2" src="{% static 'media_root/images/image-5.jpg'%}"/>
+        </a>
+
+         <a href="{% static 'media_root/images/image-3.jpg'%}">
+            <img alt="caption for image 2" src="{% static 'media_root/images/image-3.jpg'%}"/>
+        </a>
+
+    </div>
+
+
+
+  </div>
+{% endblock %}
+{% block extra_js %}
+   <script type="text/javascript">
+     $("#basicExample").justifiedImages({
+      rowHeight : 70,
+      lastRow : 'nojustify',
+      margins : 3
+     });
+   </script>
+
+{% endblock extra_js %}

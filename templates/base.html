@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static 'media_root/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'media_root/css/materialize.min.css' %}">
+    <link rel="stylesheet" href="{% static 'media_root/css/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'media_root/css/jquery.justified.css' %}">
+    <link rel="stylesheet" href="{% static 'media_root/css/main.css' %}">
+
+    <title>Title</title>
+</head>
+<body>
+    {% block content %}
+    {% endblock %}
+
+
+    <script src="{% static 'media_root/js/jquery-3.3.1.min.js'%}"></script>
+    <script src="{% static 'media_root/js/popper.min.js'%}"></script>
+    <script src="{% static 'media_root/js/bootstrap.min.js'%}"></script>
+    <script src="{% static 'media_root/js/materialize.min.js'%}"></script>
+    <script src="{% static 'media_root/js/justified.min.js'%}"></script>
+    {% block extra_js %}
+    {% endblock extra_js %}
+</body>
+</html>
